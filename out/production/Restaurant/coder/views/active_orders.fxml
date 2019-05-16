@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<SplitPane dividerPositions="0.29797979797979796" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="336.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="coder.controllers.ActiveOrders">
+  <items>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="334.0" prefWidth="151.0">
+         <children>
+            <ListView fx:id="active_order_listview" prefHeight="334.0" prefWidth="174.0" />
+         </children></AnchorPane>
+      <VBox prefHeight="200.0" prefWidth="100.0">
+         <children>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="294.0" prefWidth="416.0">
+               <children>
+                  <TableView fx:id="active_order_tableview" prefHeight="334.0" prefWidth="450.0">
+                    <columns>
+                      <TableColumn fx:id="active_order_col_id" prefWidth="45.0" text="id" />
+                      <TableColumn fx:id="active_roder_col_name" prefWidth="157.0" text="name" />
+                        <TableColumn fx:id="active_order_col_price" prefWidth="88.0" text="price" />
+                        <TableColumn fx:id="active_order_col_count" prefWidth="63.0" text="count" />
+                        <TableColumn fx:id="active_order_col_total" prefWidth="67.0" text="total" />
+                    </columns>
+                  </TableView>
+               </children>
+            </AnchorPane>
+            <HBox prefHeight="31.0" prefWidth="416.0">
+               <children>
+                  <Label fx:id="active_order_total" text="Total : ">
+                     <HBox.margin>
+                        <Insets left="20.0" top="5.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Label fx:id="active_order_tax" text="Tax :">
+                     <HBox.margin>
+                        <Insets left="20.0" top="5.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Label fx:id="active_order_grand_total" text="Grand Total :">
+                     <HBox.margin>
+                        <Insets left="20.0" right="20.0" top="5.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Button alignment="CENTER_RIGHT" contentDisplay="RIGHT" mnemonicParsing="false" onAction="#billOut" text="Bill Out" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+  </items>
+</SplitPane>

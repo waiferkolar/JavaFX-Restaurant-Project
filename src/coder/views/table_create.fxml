@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane prefHeight="336.0" prefWidth="450.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="coder.controllers.TableCreateController">
+   <children>
+      <Label layoutX="171.0" layoutY="41.0" text="Create new Table" />
+      <ComboBox fx:id="admin_ct_enabled" layoutX="211.0" layoutY="86.0" prefWidth="150.0" />
+      <Label layoutX="131.0" layoutY="91.0" text="Enabled" />
+      <TextField fx:id="admn_ct_charge" layoutX="211.0" layoutY="155.0" />
+      <Label layoutX="131.0" layoutY="160.0" text="charge" />
+      <Label layoutX="131.0" layoutY="213.0" text="Chair" />
+      <TextField fx:id="admin_ct_chair" layoutX="211.0" layoutY="208.0" />
+      <Button layoutX="331.0" layoutY="257.0" mnemonicParsing="false" onAction="#startCreateTableNow" text="save" />
+   </children>
+</AnchorPane>

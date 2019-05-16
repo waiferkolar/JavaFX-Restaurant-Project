@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="336.0" prefWidth="450.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="coder.controllers.AdminUserController">
+   <children>
+      <ToolBar prefHeight="40.0" prefWidth="200.0">
+        <items>
+          <Button mnemonicParsing="false" onAction="#createUser" text="User Create" />
+        </items>
+      </ToolBar>
+      <TableView fx:id="admin_all_users_table" prefHeight="297.0" prefWidth="327.0">
+        <columns>
+          <TableColumn fx:id="admin_user_id" prefWidth="75.0" text="id" />
+          <TableColumn fx:id="admin_user_name" prefWidth="146.0" text="username" />
+            <TableColumn fx:id="admin_user_password" minWidth="5.0" prefWidth="106.0" text="password" />
+            <TableColumn fx:id="admin_user_enabled" minWidth="5.0" prefWidth="62.0" text="enabled" />
+            <TableColumn fx:id="admin_user_role" minWidth="5.0" prefWidth="57.0" text="role" />
+        </columns>
+      </TableView>
+   </children>
+</VBox>

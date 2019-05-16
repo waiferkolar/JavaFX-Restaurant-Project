@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<TableView fx:id="sale_history_table" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="336.0" prefWidth="450.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="coder.controllers.SlaeHistoryController">
+  <columns>
+    <TableColumn fx:id="sale_history_table_col_date" prefWidth="248.0" text="Date" />
+    <TableColumn fx:id="sale_history_table_col_total_sale" prefWidth="201.0" text="Total Sale" />
+  </columns>
+</TableView>

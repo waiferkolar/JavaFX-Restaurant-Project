@@ -1,0 +1,10 @@
+.main_panel{
+    -fx-background-color:#B2BEB5;
+}
+.table_button{
+    -fx-background-color:#ff8800;
+    -fx-font0size:25px;
+    -fx-padding:10px;
+    -fx-border-insets:5px;
+    -fx-background-insets:15px;
+}

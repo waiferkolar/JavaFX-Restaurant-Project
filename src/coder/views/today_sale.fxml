@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<VBox xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="coder.controllers.TodaySaleConroller">
+   <children>
+      <TableView fx:id="today_sale_table" prefHeight="336.0" prefWidth="450.0">
+        <columns>
+          <TableColumn fx:id="today_sale_table_col_id" prefWidth="75.0" text="id" />
+          <TableColumn fx:id="today_sale_table_col_name" prefWidth="75.0" text="name" />
+            <TableColumn fx:id="today_sale_table_col_price" prefWidth="75.0" text="price" />
+            <TableColumn fx:id="today_sale_table_col_count" prefWidth="75.0" text="count" />
+            <TableColumn fx:id="today_sale_table_col_total" prefWidth="75.0" text="total" />
+        </columns>
+      </TableView>
+      <ToolBar nodeOrientation="RIGHT_TO_LEFT" prefHeight="40.0" prefWidth="450.0">
+         <items>
+            <Label fx:id="today_sale_total_lable" text="Today Sale Total">
+               <padding>
+                  <Insets left="20.0" right="20.0" />
+               </padding>
+            </Label>
+         </items>
+      </ToolBar>
+   </children>
+</VBox>

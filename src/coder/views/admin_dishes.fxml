@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="336.0" prefWidth="450.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="coder.controllers.AdminDishesController">
+   <children>
+      <ToolBar prefHeight="40.0" prefWidth="200.0">
+        <items>
+          <Button mnemonicParsing="false" onAction="#startCreateDish" text="Create Dish" />
+        </items>
+      </ToolBar>
+      <TableView fx:id="admin_dish_table" prefHeight="296.0" prefWidth="400.0">
+        <columns>
+          <TableColumn fx:id="admin_dish_col_id" prefWidth="75.0" text="id" />
+          <TableColumn fx:id="admin_dish_col_name" prefWidth="75.0" text="name" />
+            <TableColumn fx:id="admin_dish_col_price" prefWidth="75.0" text="price" />
+            <TableColumn fx:id="admin_dish_col_enable" prefWidth="60.0" text="enabled" />
+        </columns>
+      </TableView>
+   </children>
+</VBox>

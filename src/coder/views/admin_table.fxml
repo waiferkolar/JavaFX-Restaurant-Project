@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="336.0" prefWidth="450.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="coder.controllers.AdminTableController">
+   <children>
+      <ToolBar prefHeight="40.0" prefWidth="200.0">
+        <items>
+          <Button mnemonicParsing="false" onAction="#createTable" text="Create Table" />
+        </items>
+      </ToolBar>
+      <TableView fx:id="admin_table_table" prefHeight="299.0" prefWidth="450.0">
+        <columns>
+          <TableColumn fx:id="admin_table_table_col_id" prefWidth="75.0" text="id" />
+          <TableColumn fx:id="admin_table_table_col_enabled" prefWidth="75.0" text="enabled" />
+            <TableColumn fx:id="admin_table_table_col_charge" prefWidth="75.0" text="charge" />
+            <TableColumn fx:id="admin_table_table_col_chair" prefWidth="75.0" text="charis" />
+        </columns>
+      </TableView>
+   </children>
+</VBox>

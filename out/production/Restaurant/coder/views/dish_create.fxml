@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane prefHeight="336.0" prefWidth="450.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="coder.controllers.DishCreateController">
+   <children>
+      <Label layoutX="174.0" layoutY="34.0" text="Create New Dish" />
+      <TextField fx:id="dish_name" layoutX="194.0" layoutY="82.0" />
+      <Label layoutX="125.0" layoutY="87.0" text="name" />
+      <Label layoutX="125.0" layoutY="136.0" text="price" />
+      <TextField fx:id="dish_price" layoutX="194.0" layoutY="131.0" />
+      <ComboBox fx:id="dish_enabled" layoutX="194.0" layoutY="189.0" prefWidth="150.0" />
+      <Label layoutX="116.0" layoutY="194.0" text="Enabled" />
+      <Button layoutX="302.0" layoutY="250.0" mnemonicParsing="false" onAction="#createDishNow" text="Save" />
+   </children>
+</AnchorPane>

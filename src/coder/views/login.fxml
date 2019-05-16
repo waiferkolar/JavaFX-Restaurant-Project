@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="366.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="coder.controllers.LoginController">
+    <children>
+        <Label layoutX="153.0" layoutY="45.0" text="Login To User Software" textFill="#38cd30">
+            <font>
+                <Font size="25.0" />
+            </font>
+        </Label>
+        <Label layoutX="154.0" layoutY="111.0" text="Username">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </Label>
+        <TextField fx:id="tvUsername" layoutX="263.0" layoutY="109.0" />
+        <TextField fx:id="tvPassword" layoutX="263.0" layoutY="170.0" />
+        <Label layoutX="154.0" layoutY="172.0" text="Password">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </Label>
+        <Button fx:id="tvLoginBtn" layoutX="371.0" layoutY="216.0" mnemonicParsing="false" onAction="#startLogin" text="Button" />
+    </children>
+</AnchorPane>

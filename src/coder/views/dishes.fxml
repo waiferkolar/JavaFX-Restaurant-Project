@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<TableView fx:id="dishTable" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="336.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="coder.controllers.DishesController">
+  <columns>
+    <TableColumn fx:id="col_dish_id" prefWidth="75.0" text="id" />
+    <TableColumn fx:id="col_dish_name" prefWidth="75.0" text="name" />
+      <TableColumn fx:id="col_dish_price" prefWidth="75.0" text="price" />
+      <TableColumn fx:id="col_dish_enabled" prefWidth="75.0" text="enabled" />
+  </columns>
+</TableView>
