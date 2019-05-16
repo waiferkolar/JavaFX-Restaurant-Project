@@ -1,6 +1,7 @@
 package coder.controllers;
 
-import coder.helper.MyDialog;
+import coder.helper.Printty;
+import coder.models.DishPrint;
 import coder.models.OrderDetail;
 import coder.models.Table;
 import coder.models.services.OrderService;
@@ -18,7 +19,9 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 
+import java.awt.print.PrinterException;
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.ResourceBundle;
 
@@ -56,6 +59,8 @@ public class ActiveOrders implements Initializable {
     @FXML
     private Label active_order_total;
 
+    int currentIndex = 0;
+
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         TableService tableService = new TableService();
@@ -72,6 +77,7 @@ public class ActiveOrders implements Initializable {
                     public void changed(ObservableValue<? extends String> observable, String oldValue, String newValue) {
 //                        int ind = active_order_listview.getSelectionModel().getSelectedIndex();
                         generateOrdersByTable(Integer.parseInt(newValue));
+                        currentIndex = Integer.parseInt(newValue);
                     }
                 });
 
@@ -79,7 +85,24 @@ public class ActiveOrders implements Initializable {
 
     @FXML
     void billOut(ActionEvent event) {
-        MyDialog.show("Bill Out Now");
+        OrderService orderService = new OrderService();
+        List<OrderDetail> orderDetails = orderService.getOrderDetailByTableId(currentIndex);
+        List<DishPrint> dishPrints = new ArrayList<>();
+        for (OrderDetail orderDetail : orderDetails) {
+            dishPrints.add(new DishPrint(
+                    orderDetail.getName(),
+                    orderDetail.getPrice(),
+                    orderDetail.getCount(),
+                    orderDetail.getTotal()
+            ));
+        }
+
+        try {
+            Printty.print(dishPrints);
+        } catch (PrinterException e) {
+            e.printStackTrace();
+        }
+
     }
 
     public void generateOrdersByTable(int id) {

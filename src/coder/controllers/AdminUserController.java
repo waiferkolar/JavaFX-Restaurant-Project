@@ -4,7 +4,6 @@ package coder.controllers;
 import coder.Main;
 import coder.models.User;
 import coder.models.services.UserService;
-import com.apple.eawt.AppEvent;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;

@@ -1,2 +1,6 @@
 .idea/
 Restaurant.iml
+.DS_Store
+src/.DS_Store
+src/coder/.DS_Store
+
